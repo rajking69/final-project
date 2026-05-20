@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "Final Exam - localhost:3000",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Students API (dummy JSON)",
+      "item": [
+        {
+          "name": "GET all students",
+          "request": { "method": "GET", "url": "http://localhost:3000/students" }
+        },
+        {
+          "name": "POST add student",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rahim\",\n  \"email\": \"rahim@gmail.com\",\n  \"age\": 22\n}"
+            },
+            "url": "http://localhost:3000/students"
+          }
+        },
+        {
+          "name": "PUT update student",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"name\": \"Karim Updated\",\n  \"age\": 23\n}"
+            },
+            "url": "http://localhost:3000/students"
+          }
+        },
+        {
+          "name": "DELETE student",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"id\": 2\n}" },
+            "url": "http://localhost:3000/students"
+          }
+        }
+      ]
+    },
+    {
+      "name": "MongoDB",
+      "item": [
+        {
+          "name": "POST add-student",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rahim\",\n  \"email\": \"rahim@gmail.com\",\n  \"age\": 22\n}"
+            },
+            "url": "http://localhost:3000/add-student"
+          }
+        },
+        {
+          "name": "GET students from MongoDB",
+          "request": { "method": "GET", "url": "http://localhost:3000/students-db" }
+        }
+      ]
+    }
+  ]
+}
